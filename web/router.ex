@@ -16,7 +16,8 @@ defmodule Remynders.Router do
   scope "/", Remynders do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", IndexController, :index
+    resources "/reminders", ReminderController
   end
 
   # Other scopes may use custom stacks.
